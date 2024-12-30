@@ -1,0 +1,407 @@
+/* Toàn bộ trang */
+body {
+    font-family: "avo", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e5ee;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+/* Header */
+#header {
+    background-color: white; /* Đặt màu nền là trắng */
+    padding: 10px; /* Xóa padding thừa */
+    position: fixed; /* Để header luôn cố định ở đầu trang */
+    top: 0;
+    left: 0;
+    width: 100%; /* Đảm bảo header chiếm toàn bộ chiều rộng */
+    height: 70px; /* Đặt chiều cao của header bằng 120px */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ cho header */
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Canh giữa các phần tử trong header theo chiều dọc */
+    height: 100%; /* Đảm bảo container chiếm toàn bộ chiều cao của header */
+}
+
+.logo img {
+    width: 80px; /* Chiều rộng logo */
+    height: auto; /* Giữ tỷ lệ chiều cao của logo */
+}
+#header .right-info {
+    list-style: none;
+    display: flex;
+}
+
+#header .right-info li {
+    margin-left: 30px;
+}
+
+#header .right-info a {
+    color: white; /* Màu chữ trắng */
+    text-decoration: none;
+    font-size: 21px;
+    background-color: #0360c4; /* Màu xanh nước biển */
+    padding: 10px 20px; /* Tạo khoảng cách bên trong cho nút */
+    border-radius: 10px; /* Bo góc */
+    border: 2px solid #3d3d3b; /* Viền đen xung quanh */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+#header .right-info a:hover {
+    text-decoration: none;
+    background-color: #4ece42ab; /* Màu xanh đậm khi hover */
+    color: #fff; /* Màu chữ giữ nguyên khi hover */
+}
+
+/* Thêm khoảng cách cho body để tránh bị che mất phần nội dung phía dưới header khi dùng fixed */
+body {
+    padding-top: 80px; /* Điều chỉnh theo chiều cao của header */
+    padding-left: 20px;  /* Điều chỉnh khoảng cách lề trái */
+    padding-right: 20px; /* Điều chỉnh khoảng cách lề phải */
+}
+
+/* Visual */
+#visual {
+    position: relative;
+    height: 750px;
+    background: url(image/Background.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 50px; /* Thêm khoảng cách 50px ở hai bên trái và phải */
+    text-align: center;
+    color: white;
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+/* Lớp phủ màu đen mờ */
+#visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Lớp phủ đen mờ */
+    z-index: 1; /* Đảm bảo lớp phủ nằm dưới nội dung */
+}
+
+/* Điều chỉnh font-size cho cả hai dòng chữ */
+#visual .txt {
+    font-size: 60px;  /* Kích thước chữ mặc định */
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 20px;  /* Tăng khoảng cách giữa các dòng chữ */
+    z-index: 2;
+    position: relative;
+}
+
+/* Chỉnh sửa font-size cho phần tử có ID #KSK */
+#KSK {
+    font-size: 80px !important;  /* Tăng kích thước chữ cho "PHẦN MỀM KSK" */
+    margin-bottom: 30px;  /* Tăng khoảng cách giữa "PHẦN MỀM KSK" và dòng tiếp theo */
+}
+
+/* Điều chỉnh khoảng cách giữa các dòng trong "HỖ TRỢ KHÁM SỨC KHỎE DOANH NGHIỆP" */
+#HoTro {
+    font-size: 60px !important;  /* Đảm bảo rằng kích thước chữ "HỖ TRỢ KHÁM SỨC KHỎE DOANH NGHIỆP" sẽ là 60px */
+    line-height: 1.7;  /* Tăng khoảng cách giữa các dòng nếu cần */
+}
+
+
+/* About Us */
+.aboutus {
+    background-color: rgb(205, 224, 241);
+    margin: 0 250px;  /* Tạo khoảng cách 250px ở hai bên trái và phải, 0px trên và dưới */
+    padding: 10px 50px;  /* Tạo padding 10px trên dưới, 50px trái phải */
+    text-align: center;
+    max-width: calc(100% - 500px); /* Giới hạn chiều rộng tối đa, 250px x 2 cho cả hai bên */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào tổng chiều rộng */
+}
+
+.aboutus h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.aboutus .desc p{
+    text-align: left;
+    font-size: 20px;
+    line-height: 0.1;
+}
+.aboutus .desc {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.container {
+    margin-bottom: 40px;
+}
+/* pm Us */
+.pm {
+    background-color: rgb(217, 240, 217);
+    margin: 0 250px;
+    padding: 10px 50px;
+    text-align: center;
+    max-width: calc(100% - 500px);
+    box-sizing: border-box;
+}
+.pm h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và phần nội dung bên dưới */
+}
+.content-container {
+    display: flex;
+    justify-content: space-between; /* Căn đều các phần tử con */
+    align-items: flex-start; /* Căn các phần tử con theo đầu của dòng */
+}
+
+.content-container .desc {
+    /* background-color: rgb(18, 75, 18); */
+    width: 45%; /* Đặt chiều rộng của .desc */
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.pm .desc {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.desc h4 {
+    font-size: 22px;
+    color: #080808;
+    margin-bottom: 10px;
+}
+.videoClass {
+    width: 45%; /* Đặt chiều rộng của video */
+    /* background-color: #25D366; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 330px;  /* Tùy chỉnh chiều cao */
+    text-align: center;
+}
+/* Cải tiến phần #VideoGioiThieu để căn giữa video */
+#VideoGioiThieu {
+
+    display: flex; /* Sử dụng flexbox cho container */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 330px; /* Chiều cao 100% viewport */
+    text-align: center; /* Căn giữa nội dung bên trong */
+}
+
+/* Cải tiến phần .videoClass để căn giữa video */
+#VideoGioiThieu .videoClass {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo container có chiều cao đầy đủ */
+    text-align: center;
+}
+/* Container chính */
+.image-container {
+    display: flex;           /* Đặt các phần tử theo hàng ngang */
+    justify-content: flex-start; /* Căn trái */
+    align-items: flex-start;    /* Căn các phần tử về trên cùng */
+    gap: 50px;                  /* Khoảng cách giữa các phần tử */
+}
+
+/* Các phần tử bên trái (BaoCao và TongHop) */
+.image-left {
+    max-width: 700px;         /* Chiều rộng tối đa 700px */
+    width: 100%;
+}
+
+.img-left {
+    width: 100%;              /* Đảm bảo hình ảnh không vượt quá chiều rộng của phần tử cha */
+    height: auto;             /* Giữ tỷ lệ cho hình ảnh */
+    margin-top: 20px;         /* Khoảng cách trên cho hình ảnh */
+}
+
+/* Đặt TongHop xuống dưới BaoCao */
+.image-left:nth-child(2) {
+    margin-top: 20px;         /* Khoảng cách giữa BaoCao và TongHop */
+}
+
+/* Phần tử bên phải (TraCuuWeb) */
+.image-right {
+    max-width: 450px;         /* Chiều rộng tối đa 200px cho TraCuuWeb */
+    height: auto0px;           /* Chiều cao cố định 1500px cho TraCuuWeb */
+    width: 100%;              /* Đảm bảo chiều rộng không vượt quá phần tử cha */
+}
+
+.img-right {
+    width: 100%;              /* Đảm bảo hình ảnh không vượt quá chiều rộng của phần tử cha */
+    height: 100%;             /* Đảm bảo hình ảnh chiếm hết chiều cao của phần tử */
+    object-fit: cover;        /* Đảm bảo hình ảnh được cắt vừa vặn */
+    margin-top: 20px;         /* Khoảng cách trên cho TraCuuWeb */
+}
+/* Đảm bảo phần tử footer có position relative */
+#footer {
+    position: relative; /* Để lớp phủ được định vị chính xác */
+    background: url(image/Footer.png) no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 40px 0;
+}
+
+/* Lớp phủ màu đen mờ */
+#footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(103, 108, 153, 0.5); /* Giảm độ mờ để lớp phủ không ảnh hưởng quá nhiều đến nội dung */
+    z-index: 0; /* Đảm bảo lớp phủ nằm dưới nội dung */
+    opacity: 1; /* Đặt độ trong suốt là 70% */
+}
+
+/* Định dạng container */
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* Đảm bảo nội dung nằm trên lớp phủ */
+    z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
+}
+
+/* Các định dạng bên trái */
+#footer .left {
+    width: 60%;
+    padding-left: 400px;
+}
+
+/* Định dạng logo footer */
+#footer .logo-footer a img {
+    width: 150px;
+}
+
+/* Định dạng tên */
+#footer .name h2 {
+    font-size: 40px;
+}
+
+#footer .name p {
+    font-size: 28px;
+}
+
+/* Định dạng danh sách liên kết */
+#footer .left ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#footer .left ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#footer .left ul li a {
+    color: rgb(255, 252, 252);
+    text-decoration: none;
+}
+ul li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Thêm khoảng cách giữa biểu tượng và văn bản */
+    vertical-align: middle; /* Căn giữa hình ảnh với văn bản */
+    
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Mở rộng container cho các màn hình nhỏ */
+        margin: 0 20px; /* Giảm khoảng cách từ hai bên */
+    }
+
+    #header .container {
+        flex-direction: column; /* Đặt logo và thông tin bên phải theo chiều dọc */
+        align-items: center;
+    }
+
+    .aboutus, .pm {
+        margin: 0 20px; /* Giảm khoảng cách hai bên */
+    }
+
+    .content-container {
+        flex-direction: column; /* Đặt các phần tử theo chiều dọc */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .content-container .desc, .videoClass {
+        width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng */
+        margin-bottom: 20px; /* Khoảng cách giữa các phần tử */
+    }
+
+    .image-container {
+        flex-direction: column; /* Đặt các hình ảnh theo chiều dọc */
+        align-items: center;
+        gap: 20px; /* Khoảng cách giữa các hình ảnh */
+    }
+
+    .image-left, .image-right {
+        max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng màn hình */
+    }
+
+    .videoClass {
+        width: 100%; /* Đảm bảo video chiếm toàn bộ chiều rộng */
+        height: auto; /* Giữ tỷ lệ video */
+    }
+
+
+
+
+    #myTab {
+        display: flex;           /* Đảm bảo các tab được hiển thị theo chiều ngang */
+        justify-content: space-around; /* Căn chỉnh các tab đều nhau */
+      }
+      
+      .nav-item {
+        margin-right: 20px;     /* Thêm khoảng cách giữa các tab */
+      }
+      
+      .b3_itg_tab_img img {
+        max-width: 30px; /* Điều chỉnh kích thước hình ảnh trong tab để vừa vặn */
+        margin-right: 10px; /* Khoảng cách giữa các ảnh */
+      }
+      
+      .b3_itg_tab_title {
+        font-size: 14px; /* Điều chỉnh font size của tiêu đề tab */
+        text-align: center; /* Căn giữa tiêu đề */
+      }
+
+      .tab-content {
+        border: 1px solid #ddd; /* Khung bao quanh */
+        padding: 20px; /* Khoảng cách trong khung */
+        border-radius: 10px; /* Viền bo góc */
+        background-color: #f9f9f9; /* Màu nền của khung */
+      }
+      
+      .tab-pane {
+        display: none; /* Các nội dung tab ẩn mặc định */
+      }
+      
+      .tab-pane.show {
+        display: block; /* Chỉ hiển thị nội dung tab đang được chọn */
+      }
+      
+      .nav-tabs .nav-link.active {
+        background-color: #007bff; /* Màu nền của tab đang được chọn */
+        color: white; /* Màu chữ của tab đang được chọn */
+      }
+      
+}
